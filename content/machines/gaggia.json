@@ -1,0 +1,9 @@
+{
+  "title_en": "Gaggia Classica",
+  "title_it": "Gaggia Classica",
+  "description_en": "Historic espresso machine from the inventor of crema, featuring a spring-loaded piston system and copper boiler.",
+  "description_it": "Macchina espresso storica dall'inventore della crema, dotata di sistema a pistone a molla e caldaia in rame.",
+  "image": "/images/machines/machine1.jpg",
+  "featured": true,
+  "order": 3
+}

@@ -1,0 +1,251 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Uncomment for local development
+# local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# Global media library settings
+media_library:
+  name: uploadcare
+  config:
+    publicKey: demopublickey
+    multiple: false
+    tabs: 'file camera url'
+    effects: 'crop, rotate, enhance, grayscale'
+    imageShrink: '2000x2000'
+    previewStep: true
+
+collections:
+  - name: "config"
+    label: "Site Configuration"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "content/config/general.json"
+        fields:
+          - { label: "Site Title (EN)", name: "site_title_en", widget: "string" }
+          - { label: "Site Title (IT)", name: "site_title_it", widget: "string" }
+          - { 
+              label: "Logo", 
+              name: "logo", 
+              widget: "image",
+              media_library: {
+                config: {
+                  max_file_size: 2048000,
+                  imageShrink: '200x200'
+                }
+              }
+            }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string", pattern: ['^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', 'Must be a valid email'] }
+
+  - name: "hero"
+    label: "Hero Section"
+    files:
+      - name: "hero_en"
+        label: "Hero (English)"
+        file: "content/hero/en.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - { 
+              label: "Background Image", 
+              name: "background_image", 
+              widget: "image",
+              media_library: {
+                config: {
+                  max_file_size: 5120000,
+                  imageShrink: '2000x2000'
+                }
+              }
+            }
+          - { label: "CTA Button Text", name: "cta_text", widget: "string" }
+          - { label: "Secondary CTA Text", name: "secondary_cta_text", widget: "string" }
+      
+      - name: "hero_it"
+        label: "Hero (Italian)"
+        file: "content/hero/it.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - { 
+              label: "Background Image", 
+              name: "background_image", 
+              widget: "image",
+              media_library: {
+                config: {
+                  max_file_size: 5120000,
+                  imageShrink: '2000x2000'
+                }
+              }
+            }
+          - { label: "CTA Button Text", name: "cta_text", widget: "string" }
+          - { label: "Secondary CTA Text", name: "secondary_cta_text", widget: "string" }
+
+  - name: "about"
+    label: "About Section"
+    files:
+      - name: "about_en"
+        label: "About (English)"
+        file: "content/about/en.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { 
+              label: "Image", 
+              name: "image", 
+              widget: "image",
+              media_library: {
+                config: {
+                  max_file_size: 3072000,
+                  imageShrink: '1200x1200'
+                }
+              }
+            }
+      
+      - name: "about_it"
+        label: "About (Italian)"
+        file: "content/about/it.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { 
+              label: "Image", 
+              name: "image", 
+              widget: "image",
+              media_library: {
+                config: {
+                  max_file_size: 3072000,
+                  imageShrink: '1200x1200'
+                }
+              }
+            }
+
+  # - name: "machines"
+  #   label: "Espresso Machines"
+  #   folder: "content/machines"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - { label: "Title (EN)", name: "title_en", widget: "string" }
+  #     - { label: "Title (IT)", name: "title_it", widget: "string" }
+  #     - { label: "Description (EN)", name: "description_en", widget: "text" }
+  #     - { label: "Description (IT)", name: "description_it", widget: "text" }
+  #     - { 
+  #         label: "Image", 
+  #         name: "image", 
+  #         widget: "image",
+  #         media_library: {
+  #           config: {
+  #             max_file_size: 3072000,
+  #             imageShrink: '1200x1600'
+  #           }
+  #         }
+  #       }
+  #     - { label: "Featured", name: "featured", widget: "boolean", default: false }
+  #     - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+  - name: "machines"
+    label: "Espresso Machines"
+    folder: "content/machines"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title (EN)", name: "title_en", widget: "string" }
+      - { label: "Title (IT)", name: "title_it", widget: "string" }
+      - { label: "Short Description (EN)", name: "description_en", widget: "text", hint: "Brief description for cards" }
+      - { label: "Short Description (IT)", name: "description_it", widget: "text", hint: "Brief description for cards" }
+      - { label: "Long Description (EN)", name: "long_description_en", widget: "text", required: false, hint: "Detailed description for detail page" }
+      - { label: "Long Description (IT)", name: "long_description_it", widget: "text", required: false, hint: "Detailed description for detail page" }
+      - { 
+          label: "Main Image", 
+          name: "image", 
+          widget: "image",
+          media_library: {
+            config: {
+              max_file_size: 3072000,
+              imageShrink: '1200x1600'
+            }
+          }
+        }
+      - { 
+          label: "Gallery Images", 
+          name: "gallery_images", 
+          widget: "list",
+          required: false,
+          field: { 
+            label: "Image", 
+            name: "image", 
+            widget: "image",
+            media_library: {
+              config: {
+                max_file_size: 3072000,
+                imageShrink: '1200x1200'
+              }
+            }
+          }
+        }
+      - label: "Technical Specifications"
+        name: "specifications"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Label (EN)", name: "label_en", widget: "string" }
+          - { label: "Label (IT)", name: "label_it", widget: "string" }
+          - { label: "Value (EN)", name: "value_en", widget: "string" }
+          - { label: "Value (IT)", name: "value_it", widget: "string" }
+      - { label: "Features (EN)", name: "features_en", widget: "list", required: false, field: { label: "Feature", name: "feature", widget: "string" } }
+      - { label: "Features (IT)", name: "features_it", widget: "list", required: false, field: { label: "Feature", name: "feature", widget: "string" } }
+      - { label: "History (EN)", name: "history_en", widget: "text", required: false }
+      - { label: "History (IT)", name: "history_it", widget: "text", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+
+  - name: "gallery"
+    label: "Gallery Images"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { 
+          label: "Image", 
+          name: "image", 
+          widget: "image",
+          media_library: {
+            config: {
+              max_file_size: 3072000,
+              imageShrink: '1200x1200'
+            }
+          }
+        }
+      - { label: "Alt Text (EN)", name: "alt_en", widget: "string" }
+      - { label: "Alt Text (IT)", name: "alt_it", widget: "string" }
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
+
+  - name: "stats"
+    label: "Statistics"
+    files:
+      - name: "stats_en"
+        label: "Stats (English)"
+        file: "content/stats/en.json"
+        fields:
+          - label: "Statistics"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+      
+      - name: "stats_it"
+        label: "Stats (Italian)"
+        file: "content/stats/it.json"
+        fields:
+          - label: "Statistics"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }

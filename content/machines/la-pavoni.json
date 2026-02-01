@@ -1,0 +1,56 @@
+{
+  "title_en": "La Pavoni Europiccola",
+  "title_it": "La Pavoni Europiccola",
+  "description_en": "A classic Italian lever espresso machine from the 1960s, known for its chrome finish and exceptional build quality.",
+  "description_it": "Una classica macchina espresso a leva italiana degli anni '60, nota per la sua finitura cromata e l'eccezionale qualità costruttiva.",
+  "long_description_en": "The La Pavoni Europiccola represents the pinnacle of Italian lever espresso machine design. Manufactured since 1961, this iconic machine has graced countless homes and cafes around the world. Its distinctive chrome-plated brass body and elegant lines make it a true work of art that delivers exceptional espresso.",
+  "long_description_it": "La La Pavoni Europiccola rappresenta l'apice del design delle macchine espresso a leva italiane. Prodotta dal 1961, questa iconica macchina ha abbellito innumerevoli case e caffè in tutto il mondo. Il suo caratteristico corpo in ottone cromato e le linee eleganti la rendono una vera opera d'arte che produce un espresso eccezionale.",
+  "image": "/images/machines/machine1.jpg",
+  "gallery_images": [
+    "/images/machines/machine1.jpg"
+  ],
+  "specifications": [
+    {
+      "label_en": "Year",
+      "label_it": "Anno",
+      "value_en": "1960s",
+      "value_it": "Anni '60"
+    },
+    {
+      "label_en": "Boiler Capacity",
+      "label_it": "Capacità Caldaia",
+      "value_en": "0.8 liters",
+      "value_it": "0,8 litri"
+    },
+    {
+      "label_en": "Material",
+      "label_it": "Materiale",
+      "value_en": "Chrome-plated brass",
+      "value_it": "Ottone cromato"
+    },
+    {
+      "label_en": "Weight",
+      "label_it": "Peso",
+      "value_en": "4.5 kg",
+      "value_it": "4,5 kg"
+    }
+  ],
+  "features_en": [
+    "Manual lever operation for precise extraction control",
+    "Chrome-plated brass construction",
+    "Professional-grade portafilter",
+    "Steam wand for milk frothing",
+    "Pressure gauge for monitoring extraction"
+  ],
+  "features_it": [
+    "Funzionamento a leva manuale per un controllo preciso dell'estrazione",
+    "Costruzione in ottone cromato",
+    "Portafiltro di livello professionale",
+    "Lancia vapore per montare il latte",
+    "Manometro per monitorare l'estrazione"
+  ],
+  "history_en": "The Europiccola was introduced in 1961 as a home version of La Pavoni's commercial machines. It quickly became a favorite among espresso enthusiasts who appreciated its ability to produce cafe-quality espresso at home. The design has remained largely unchanged for over 60 years, a testament to its timeless appeal and functional excellence.",
+  "history_it": "L'Europiccola è stata introdotta nel 1961 come versione domestica delle macchine commerciali di La Pavoni. È diventata rapidamente la preferita tra gli appassionati di espresso che apprezzavano la sua capacità di produrre espresso di qualità da bar a casa. Il design è rimasto sostanzialmente invariato per oltre 60 anni, testimonianza del suo fascino senza tempo e dell'eccellenza funzionale.",
+  "featured": true,
+  "order": 1
+}
