@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: CoffeeeBean/vintage-espresso-collection
   branch: main
 
 # Uncomment for local development
