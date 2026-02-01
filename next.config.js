@@ -7,8 +7,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // For static export (optional, uncomment if needed)
-  // output: 'export',
 }
 
 module.exports = nextConfig
