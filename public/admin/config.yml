@@ -2,23 +2,16 @@ backend:
   name: github
   repo: CoffeeeBean/vintage-espresso-collection
   branch: main
+  auth_scope: "repo"
 
 # Uncomment for local development
-# local_backend: true
+#local_backend: true
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
-# Global media library settings
 media_library:
-  name: uploadcare
-  config:
-    publicKey: demopublickey
-    multiple: false
-    tabs: 'file camera url'
-    effects: 'crop, rotate, enhance, grayscale'
-    imageShrink: '2000x2000'
-    previewStep: true
+  name: none
 
 collections:
   - name: "config"
