@@ -62,18 +62,20 @@ collections:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Image", name: "image", widget: "image" }
 
-  - name: "machines"
+- name: "machines"
     label: "Espresso Machines"
     folder: "content/machines"
     create: true
     slug: "{{slug}}"
+    format: "json"
+    extension: "json"
     fields:
       - { label: "Title (EN)", name: "title_en", widget: "string" }
       - { label: "Title (IT)", name: "title_it", widget: "string" }
-      - { label: "Short Description (EN)", name: "description_en", widget: "text", hint: "Brief description for cards" }
-      - { label: "Short Description (IT)", name: "description_it", widget: "text", hint: "Brief description for cards" }
-      - { label: "Long Description (EN)", name: "long_description_en", widget: "text", required: false, hint: "Detailed description for detail page" }
-      - { label: "Long Description (IT)", name: "long_description_it", widget: "text", required: false, hint: "Detailed description for detail page" }
+      - { label: "Short Description (EN)", name: "description_en", widget: "text" }
+      - { label: "Short Description (IT)", name: "description_it", widget: "text" }
+      - { label: "Long Description (EN)", name: "long_description_en", widget: "text", required: false }
+      - { label: "Long Description (IT)", name: "long_description_it", widget: "text", required: false }
       - { label: "Main Image", name: "image", widget: "image" }
       - { label: "Gallery Images", name: "gallery_images", widget: "list", required: false, field: { label: "Image", name: "image", widget: "image" } }
       - label: "Technical Specifications"
@@ -92,11 +94,13 @@ collections:
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
       - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int" }
 
-  - name: "gallery"
+- name: "gallery"
     label: "Gallery Images"
     folder: "content/gallery"
     create: true
     slug: "{{slug}}"
+    format: "json"
+    extension: "json"
     fields:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Alt Text (EN)", name: "alt_en", widget: "string" }
