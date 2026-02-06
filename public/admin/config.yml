@@ -3,9 +3,6 @@ backend:
   repo: CoffeeeBean/vintage-espresso-collection
   branch: main
 
-# Uncomment for local development
-# local_backend: true
-
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
