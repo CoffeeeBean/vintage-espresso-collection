@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { SiteConfig } from "@/types";
-import { Instagram, Mail, MapPin } from "lucide-react";
+import { Menu, X, Instagram, Mail, MapPin } from "lucide-react";
 
 interface HeaderProps {
   config: SiteConfig;
@@ -13,6 +13,7 @@ export default function Header({ config }: HeaderProps) {
   const router = useRouter();
   const { locale } = router;
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const isItalian = locale === "it";
 
@@ -45,42 +46,88 @@ export default function Header({ config }: HeaderProps) {
           </Link>
         </div>
 
-        <nav className="header-center">
-          <Link href="/#about">{isItalian ? "Chi Siamo" : "About"}</Link>
-          <Link href="/collection">
-            {isItalian ? "Collezione" : "Collection"}
-          </Link>
-          <Link href="/#contact">{isItalian ? "Contatti" : "Contact"}</Link>
-          <div className="header-icons display:flex">
-            <a
-              href="https://www.instagram.com/YOUR_PROFILE"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <Instagram size={18} />
-            </a>
+        <nav className="nav">
+          {/* Desktop navigation */}
+          <div className="nav-desktop">
+            <Link href="/#about">{isItalian ? "Chi Siamo" : "About"}</Link>
+            <Link href="/collection">
+              {isItalian ? "Collezione" : "Collection"}
+            </Link>
+            <Link href="/#contact">{isItalian ? "Contatti" : "Contact"}</Link>
 
-            <a href="mailto:info@yourdomain.com" aria-label="Email">
-              <Mail size={18} />
-            </a>
+            <div className="header-icons">
+              <a
+                href="https://www.instagram.com/YOUR_PROFILE"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <Instagram size={18} />
+              </a>
+              <a href="mailto:info@yourdomain.com" aria-label="Email">
+                <Mail size={18} />
+              </a>
+              <a
+                href="https://maps.google.com/?q=YOUR+ADDRESS"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Maps"
+              >
+                <MapPin size={18} />
+              </a>
+            </div>
 
-            <a
-              href="https://maps.google.com/?q=YOUR+ADDRESS"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Google Maps"
-            >
-              <MapPin size={18} />
-            </a>
+            <button className="lang-switcher" onClick={switchLocale}>
+              {isItalian ? "EN" : "IT"}
+            </button>
           </div>
-        </nav>
 
-        <div className="header-right">
-          <button className="lang-pill" onClick={switchLocale}>
-            {isItalian ? "EN" : "IT"}
+          {/* Mobile hamburger */}
+          <button
+            className="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Open menu"
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
-        </div>
+
+          {/* Mobile menu */}
+          {menuOpen && (
+            <div className="mobile-menu">
+              <Link href="/#about" onClick={() => setMenuOpen(false)}>
+                {isItalian ? "Chi Siamo" : "About"}
+              </Link>
+              <Link href="/collection" onClick={() => setMenuOpen(false)}>
+                {isItalian ? "Collezione" : "Collection"}
+              </Link>
+              <Link href="/#contact" onClick={() => setMenuOpen(false)}>
+                {isItalian ? "Contatti" : "Contact"}
+              </Link>
+
+              <div className="mobile-icons">
+                <a
+                  href="https://www.instagram.com/YOUR_PROFILE"
+                  target="_blank"
+                >
+                  <Instagram size={22} />
+                </a>
+                <a href="mailto:info@yourdomain.com">
+                  <Mail size={22} />
+                </a>
+                <a
+                  href="https://maps.google.com/?q=YOUR+ADDRESS"
+                  target="_blank"
+                >
+                  <MapPin size={22} />
+                </a>
+              </div>
+
+              <button className="lang-switcher" onClick={switchLocale}>
+              {isItalian ? "EN" : "IT"}
+            </button>
+            </div>
+          )}
+        </nav>
       </div>
     </header>
   );

@@ -1,0 +1,12 @@
+{
+  "slug": "test_slug",
+  "description_en": "something",
+  "featured": false,
+  "description_it": "descrizione",
+  "order": 1,
+  "long_description_en": "loooooong description",
+  "title_en": "test new machine cms en",
+  "long_description_it": "descrizione lunga",
+  "title_it": "test new machine cms it",
+  "image": "/images/uploads/img-20221119-wa0030.jpg"
+}
