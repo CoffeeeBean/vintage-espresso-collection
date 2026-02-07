@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { SiteConfig } from "@/types";
-import { Menu, X, Instagram, Mail, MapPin } from "lucide-react";
+import { Menu, X, Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
 
 interface HeaderProps {
   config: SiteConfig;
@@ -64,6 +64,15 @@ export default function Header({ config }: HeaderProps) {
               >
                 <Instagram size={18} />
               </a>
+              <a
+                href="https://wa.me/393331234567"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={18} />
+              </a>
+
               <a href="mailto:info@yourdomain.com" aria-label="Email">
                 <Mail size={18} />
               </a>
@@ -111,6 +120,9 @@ export default function Header({ config }: HeaderProps) {
                 >
                   <Instagram size={22} />
                 </a>
+                <a href="https://wa.me/393331234567" target="_blank">
+                  <MessageCircle size={22} />
+                </a>
                 <a href="mailto:info@yourdomain.com">
                   <Mail size={22} />
                 </a>
@@ -123,8 +135,8 @@ export default function Header({ config }: HeaderProps) {
               </div>
 
               <button className="lang-switcher" onClick={switchLocale}>
-              {isItalian ? "EN" : "IT"}
-            </button>
+                {isItalian ? "EN" : "IT"}
+              </button>
             </div>
           )}
         </nav>

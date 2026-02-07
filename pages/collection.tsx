@@ -59,7 +59,6 @@ export default function Collection({
               <span className="collection-stat-label">
                 {isItalian ? "In Evidenza" : "Featured"}
               </span>
-              <span className="collection-stat-label">Featured</span>
             </div>
           </div>
 
