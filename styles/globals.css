@@ -498,7 +498,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(101, 146, 230, 0.85) 0%, rgba(74, 105, 189, 0.9) 100%);
+  background: linear-gradient(135deg, rgb(168 58 30 / 90%) 0%,  rgba(74, 105, 189, 0.9) 100%);
 }
 
 .cta-content {
@@ -934,7 +934,7 @@ img {
 }
 
 .collection-cta {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, rgb(168 58 30 / 90%) 0%,   var(--secondary-color) 100%);
   color: white;
   padding: 5rem 0;
   text-align: center;

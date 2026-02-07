@@ -13,30 +13,7 @@ export default function Footer({ config }: FooterProps) {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div className="footer-section">
-            <h4>{isItalian ? "Creazione" : "Creation"}</h4>
-            <p>
-              {isItalian
-                ? "Lorem ipsum dolor sit amet nulla vel, consectetur massa adipiscing."
-                : "Lorem ipsum dolor sit amet nulla vel, consectetur massa adipiscing."}
-            </p>
-          </div>
-          <div className="footer-section">
-            <h4>{isItalian ? "Promozione" : "Promotion"}</h4>
-            <p>
-              {isItalian
-                ? "Lorem ipsum dolor sit amet nulla vel, consectetur massa adipiscing."
-                : "Lorem ipsum dolor sit amet nulla vel, consectetur massa adipiscing."}
-            </p>
-          </div>
-          <div className="footer-section">
-            <h4>{isItalian ? "Marchio" : "Branding"}</h4>
-            <p>
-              {isItalian
-                ? "Lorem ipsum dolor sit amet nulla vel, consectetur massa adipiscing."
-                : "Lorem ipsum dolor sit amet nulla vel, consectetur massa adipiscing."}
-            </p>
-          </div>
+          <div className="footer-section"></div>
         </div>
         <div className="footer-bottom">
           <p>&copy; 2024 Vintage Espresso Machines Collection</p>

@@ -57,7 +57,7 @@ export default function Header({ config }: HeaderProps) {
 
             <div className="header-icons">
               <a
-                href="https://www.instagram.com/YOUR_PROFILE"
+                href="https://www.instagram.com/collezione.macchine.del.caffe"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -65,7 +65,7 @@ export default function Header({ config }: HeaderProps) {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://wa.me/393331234567"
+                href="https://wa.me/393473918186"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -77,7 +77,7 @@ export default function Header({ config }: HeaderProps) {
                 <Mail size={18} />
               </a>
               <a
-                href="https://maps.google.com/?q=YOUR+ADDRESS"
+                href="https://maps.google.com/?q=CESENA"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google Maps"
@@ -115,19 +115,19 @@ export default function Header({ config }: HeaderProps) {
 
               <div className="mobile-icons">
                 <a
-                  href="https://www.instagram.com/YOUR_PROFILE"
+                  href="https://www.instagram.com/collezione.macchine.del.caffe"
                   target="_blank"
                 >
                   <Instagram size={22} />
                 </a>
-                <a href="https://wa.me/393331234567" target="_blank">
+                <a href="https://wa.me/393473918186" target="_blank">
                   <MessageCircle size={22} />
                 </a>
                 <a href="mailto:info@yourdomain.com">
                   <Mail size={22} />
                 </a>
                 <a
-                  href="https://maps.google.com/?q=YOUR+ADDRESS"
+                  href="https://maps.google.com/?q=CESENA"
                   target="_blank"
                 >
                   <MapPin size={22} />

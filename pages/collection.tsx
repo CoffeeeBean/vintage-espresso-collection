@@ -29,7 +29,7 @@ export default function Collection({
         className="collection-hero"
         style={{
           backgroundImage:
-            "linear-gradient(135deg, rgba(101, 146, 230, 0.9) 0%, rgba(74, 105, 189, 0.95) 100%), url(/images/hero-bg.jpg)",
+            "linear-gradient(135deg, rgb(168 58 30 / 90%) 0%, rgba(74, 105, 189, 0.95) 100%), url(/images/hero_collection.jpg)",
         }}
       >
         <div className="collection-hero-content">
