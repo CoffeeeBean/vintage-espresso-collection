@@ -48,13 +48,14 @@ img {
 
 /* Header */
 .header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  position: sticky;
+  background: transparent;
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  padding: 1.2rem 0;
+  padding: 1.5rem 0;
+  transition: all 0.3s ease;
 }
 
 .header-content {
@@ -66,24 +67,89 @@ img {
   margin: 0 auto;
 }
 
+.header-wrapper {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.header-pill {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 999px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.header-pill.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.header-center {
+  display: flex;
+  gap: 28px;
+  font-weight: 500;
+}
+
+.header-center a {
+  color: #222;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.header-center a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .header-pill {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .header-center {
+    display: none;
+  }
+}
+
+
 .logo {
   display: flex;
   align-items: center;
   gap: 12px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #222;
 }
 
 .logo img {
-  width: 60px;
-  height: 60px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
 .logo span {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: white;
   letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -94,13 +160,14 @@ img {
 }
 
 .nav a {
-  transition: color 0.3s;
+  transition: all 0.3s;
   position: relative;
-  color: var(--text-dark);
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav a:hover {
-  color: var(--primary-color);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .nav a::after {
@@ -110,7 +177,7 @@ img {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--primary-color);
+  background: white;
   transition: width 0.3s;
 }
 
@@ -119,35 +186,75 @@ img {
 }
 
 .lang-switcher {
-  background: var(--primary-color);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   padding: 0.6rem 1.4rem;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   font-weight: 600;
   font-size: 0.95rem;
+  backdrop-filter: blur(10px);
 }
 
 .lang-switcher:hover {
-  background: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(101, 146, 230, 0.3);
 }
+
+.header-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-scrolled .logo span,
+.header-scrolled .nav a {
+  color: var(--text-dark);
+  text-shadow: none;
+}
+
+.header-scrolled .lang-switcher {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.header-scrolled .logo img {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.lang-pill {
+  background: #e9ecef;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.lang-pill:hover {
+  background: #dfe3e7;
+}
+
+
 
 /* Hero Section */
 .hero {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 90vh;
+  min-height: 100vh; /* Changed from 90vh to 100vh */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   position: relative;
+  padding-top: 100px; /* Add padding for header space */
 }
 
 .hero::before {
@@ -157,7 +264,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(101, 146, 230, 0.7) 0%, rgba(74, 105, 189, 0.8) 100%);
+  background: rgba(0, 0, 0, 0.25); /* optional */
 }
 
 .hero-content {
