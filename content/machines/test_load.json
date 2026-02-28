@@ -8,5 +8,10 @@
   "title_en": "test new machine cms en",
   "long_description_it": "descrizione lunga",
   "title_it": "test new machine cms it",
-  "image": "/images/uploads/img-20221119-wa0030.jpg"
+  "image": "/images/uploads/img-20221119-wa0030.jpg",
+  "gallery_images": [
+    "/images/machines/machine1.jpg",
+    "/images/machines/machine1.jpg",
+    "/images/machines/machine1.jpg"
+  ]
 }
