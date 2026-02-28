@@ -1,0 +1,16 @@
+{
+  "slug":"nea-lux",
+  "title_en": "Nea-Lux",
+  "title_it": "Nea-Lux",
+  "description_en": "",
+  "description_it": "",
+  "image": "/images/machines/nea_lux/IMG_3667_principale.webp",
+  "featured": true,
+  "order": 4,
+  "gallery_images": [
+    "/images/machines/nea_lux/IMG_3671.webp",
+    "/images/machines/nea_lux/IMG_3670.webp",
+    "/images/machines/nea_lux/IMG_3657.webp",
+    "/images/machines/nea_lux/IMG_3664.webp"
+  ]
+}

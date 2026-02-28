@@ -4,14 +4,14 @@
   "title_it": "Cofer",
   "description_en": "",
   "description_it": "",
-  "image": "/images/machines/IMG_3702_principale.heic",
+  "image": "/images/machines/cofer/IMG_3702_principale.webp",
   "featured": true,
   "order": 4,
   "gallery_images": [
-    "/images/machines/IMG_3700.heic",
-    "/images/machines/IMG_3703.heic",
-    "/images/machines/IMG_3704.heic",
-    "/images/machines/IMG_3705.heic",
-    "/images/machines/IMG_3708.heic"
+    "/images/machines/cofer/IMG_3700.webp",
+    "/images/machines/cofer/IMG_3703.webp",
+    "/images/machines/cofer/IMG_3704.webp",
+    "/images/machines/cofer/IMG_3705.webp",
+    "/images/machines/cofer/IMG_3708.webp"
   ]
 }
